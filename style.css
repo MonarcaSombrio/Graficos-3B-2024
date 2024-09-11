@@ -1,7 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap')
-;root {
---bc-color:#201e43;
---primary-color:#eeeeee;
---secondary-color:#134b70;
---font: "Nunito Sans", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+root {
+    --bg-color: #201e43;
+    --primary-color: #eeeeee;
+    --secondary-color: #134b70;
+    --font: "Nunito Sans", sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    /*Corde fundo*/
+    color: var(--primary-color);
+    /* Estilo de fonte*/
+    font-family: var(--font);/*Faz com que o elemento ocupe 100% da alyura da tela do navegador*/
+    height:100vh;
 }

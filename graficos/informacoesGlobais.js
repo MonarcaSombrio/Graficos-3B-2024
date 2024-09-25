@@ -10,6 +10,6 @@ async function visualizarInformacoesGlobais(params) {
     const dados = await res.json();//espera as reposta erem convertidas em JSON
 console.log(dados);
 
-const paragrafo= document.creATEeLEMENT ('P')
+const paragrafo= document.creATEeLEMENT ('P');
 }
 visualizarInformacoesGlobais();

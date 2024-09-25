@@ -12,5 +12,7 @@ console.log(dados);
 
 const paragrafo= document.creATEeLEMENT ('P');//criar um elemento de parágrafo
 paragrafo.classList.add('graficos-container_texto')//cria uma classe do CSS
+paragrafo.innerHTML = `você sabia que o mundo tem ${dados.total_pessoas_mundo}` 
+
 }
 visualizarInformacoesGlobais();

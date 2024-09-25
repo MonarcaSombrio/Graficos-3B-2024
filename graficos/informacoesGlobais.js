@@ -12,7 +12,8 @@ console.log(dados);
 
 const paragrafo = document.createElement ('P');//criar um elemento de parágrafo
 paragrafo.classList.add('graficos-container_texto');//cria uma classe do CSS
-paragrafo.innerHTML = `você sabia que o mundo tem ${dados.total_pessoas_mundo}`;
+paragrafo.innerHTML = `você sabia que o mundo tem ${dados.total_pessoas_mundo} de pessoas 
+e que aproximadamente ${dados.total_pessoas_conectadas} estão conectadas em alguma rede ocial e passam em média ${dados.tempo_medio}  `
 
 }
 visualizarInformacoesGlobais();

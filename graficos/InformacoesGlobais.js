@@ -13,6 +13,7 @@ async function visualizarInformacoesGlobais(params) {
     const pessoasNoMundo = (dados.total_pessoas_mundo / 1e9);
     const horas = parseInt(dados.tempo_medio / 1e9);
     const minutos = Math.round((dados.tempo_medio-horas) * 60);//cria uma variável que utiliza apenasos minutos das horas efas o arredeendamento vom a função "Math.round"
+    const porcentagem = (pessoasConectadoas/pessoasNoMundo);
     console.log(dados);
 
     const paragrafo = document.createElement('P');//criar um elemento de parágrafo

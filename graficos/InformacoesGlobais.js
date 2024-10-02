@@ -26,7 +26,7 @@ Isso significa que aproximadamente <span> ${porcentagem}% </span> de pssoas stã
 
     //criara variáel"container" seleciona o ID na section do HTML
     const container = document.getElementById('graficos-container');
-    container.appendChild(parágrafo);//insere o parágrafodentro do "container" 
+    container.appendChild(paragrafo);//insere o parágrafodentro do "container" 
 
 }
 visualizarInformacoesGlobais();

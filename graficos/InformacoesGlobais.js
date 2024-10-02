@@ -19,7 +19,7 @@ async function visualizarInformacoesGlobais(params) {
     paragrafo.classList.add('graficos-container_texto');//cria uma classe do CSS
     paragrafo.innerHTML = `você sabia que o mundo tem <span> ${pessoasNoMundo} bilhoes </pan> de pessoas 
 e que aproximadamente <span> ${pessoasConectadoas} bilhoes </span> estão conectadas em alguma rede social e passam em média <span> ${horas} horas </span>
-e ${minutos} minutos conectadas.`
+e <span> ${minutos} minutos </span> conectadas.`
     //criara variáel"container" seleciona o ID na section do HTML
     const container = document.getElementById('graficos-container');
     container.appendChild(parágrafo);//insere o parágrafodentro do "container" 

@@ -11,7 +11,7 @@ async function quantidadeUsuarios() {
 
       {
         x:nomeDasRdes,
-        y:quantidadeUsuarios,
+        y:quantidadedeUsuarios,
         type:`bar`,//grafico de barras
       }
     ]

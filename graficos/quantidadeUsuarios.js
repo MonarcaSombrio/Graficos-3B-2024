@@ -12,7 +12,7 @@ async function quantidadeUsuarios() {
       {
         x:nomeDasRdes,
         y:quantidadedeUsuarios,
-        type:'bar',//grafico de barras
+        type:'bar'//grafico de barras
       }
     ]
     const grafico = document.createElement('div')//cria uma div

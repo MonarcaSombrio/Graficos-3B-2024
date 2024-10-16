@@ -17,7 +17,7 @@ async function quantidadeUsuarios() {
     ]
     const grafico = document.createElement(`div`)//cria uma div
     grafico.className = `grafico`//cria classe para div
-    document.getElementById(`graficos-container`).appendChild(`grafico`)//insere a div e a classe na tag onde tm o ID = "graficos-conteiener"
-    Plotly.newplot(grafico)
+    document.getElementById(`graficos-container`).appendChild(grafico)//insere a div e a classe na tag onde tm o ID = "graficos-conteiener"
+    Plotly.newplot(grafico,data)
   }
   quantidadeUsuarios ()

@@ -7,5 +7,12 @@ async function quantidadeUsuarios() {
 
       const nomeDasRdes = Object.keys(dados)
       const quantidadedeUsuarios = Object.values(dados)
+      const dados =()
+
+      {
+        x:nomeDasRdes,
+        y:quantidadeUsuarios,
+        type:`bar`//grafico de barras
+      }
   }
   quantidadeUsuarios ()

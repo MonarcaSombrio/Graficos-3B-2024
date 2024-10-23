@@ -12,9 +12,13 @@ async function quantidadeUsuarios() {
       {
         x:nomeDasRedes,
         y:quantidadedeUsuarios,
-        type:'bar'//grafico de barras
+        type:'bar',//grafico de barras
+        marker: {
+          color: getComputedStyle(document.body).getPropertyValue('--primary-color')
+        }
       }
     ]
+    
     const grafico = document.createElement('div')//cria uma div
     grafico.className = 'grafico'//cria classe para div
     document.getElementById('graficos-container').appendChild(grafico)//insere a div e a classe na tag onde tm o ID = "graficos-conteiener"

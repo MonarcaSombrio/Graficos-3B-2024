@@ -70,10 +70,11 @@ nav a:hover {
 
 }
 
-.grafico-container{
-margin: 5rem;
+.grafico-container {
+    margin: 5rem;
 }
-.grafico-container_texto{
+
+.grafico-container_texto {
     font-size: 1.3rem;
     text-align: center;
     padding: 2rem;
@@ -85,6 +86,7 @@ span {
     color: var(--secondary-color);
 
 }
+
 footer {
     display: flex;
     align-items: center;

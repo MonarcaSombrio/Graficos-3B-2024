@@ -24,4 +24,4 @@ async function quantidadeUsuarios() {
     document.getElementById('graficos-container').appendChild(grafico)//insere a div e a classe na tag onde tm o ID = "graficos-conteiener"
     Plotly.newPlot(grafico,data)
   }
-  quantidadeUsuarios ()
+  quantidadeUsuarios()

@@ -5,12 +5,12 @@ async function quantidadeUsuarios() {
       
       console.log(dados)
 
-      const nomeDasRdes = Object.keys(dados)
+      const nomeDasRedes = Object.keys(dados)
       const quantidadedeUsuarios = Object.values(dados)
       const data =[
 
       {
-        x:nomeDasRdes,
+        x:nomeDasRedes,
         y:quantidadedeUsuarios,
         type:'bar'//grafico de barras
       }

@@ -1,63 +1,59 @@
-async function quantidadeUsuarios() {
-  const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
-  const res = await fetch(url)
-  const dados = await res.json()
+import { getCSS, tickConfig } from "./common.js"
 
-  console.log(dados)
+async function quantidadeUsuariosPorRede() {
+    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
+    const res = await fetch(url)
+    const dados = await res.json()
+    const nomeDasRedes = Object.keys(dados)
+    const quantidadeDeUsuarios = Object.values(dados)
 
-  const nomeDasRedes = Object.keys(dados)
-  const quantidadedeUsuarios = Object.values(dados)
-  const data = [
-
-    {
-      x: nomeDasRedes,
-      y: quantidadedeUsuarios,
-      type: 'bar',//grafico de barras
-      marker: {
-        color: getComputedStyle(document.body).getPropertyValue('--primary-color')
-      }
-    }
-  ]
-
-  const layout = {
-    //cor de fundo do gráfico
-    plot_bgcolor: getCSS('--bg-color'),
-    paper_bgcolor: getCSS('--bg-color'),
-    title: {
-      text: 'Redes sociais com mais usuários no mundo',
-      x: 0,
-      font: {
-        color: getCSS('--primary-color'),
-        family: getCSS('--font'),
-        size: 30
-      }
-
-    },
-    xaxis: {
-      tilte: {
-        text: 'Bilhões de usuaros ativos',
-        font: {
-          color: getCSS('--primary-color'),
-          family: getCSS('--font'),
-          size: 30
+    const data = [
+        {
+            x: nomeDasRedes, 
+            y: quantidadeDeUsuarios, 
+            type: 'bar',
+            marker: {
+                color: getCSS('--primary-color')
+            }
         }
-      },
-    },
-    yaxis: {
-      tilte: {
-        text: 'Nome das redes',
-        font: {
-          color: getCSS('--primary-color'),
-          family: getCSS('--font'),
-          size: 30
+    ]
+
+    const laytout = {
+        plot_bgcolor: getCSS('--bg-color'),
+        paper_bgcolor: getCSS('--bg-color'),
+        title: {
+            text: 'Redes sociais com mais usuários',
+            x: 0,
+            font: {
+                color: getCSS('--primary-color'),
+                size: 30,
+                font: getCSS('--font')
+            }
+        },
+        xaxis: {
+            tickfont: tickConfig,
+            title: {
+                text: 'Nome das redes',
+                font: {
+                    color: getCSS('--secondary-color')
+                }
+            }
+        },
+        yaxis: {
+            tickfont: tickConfig,
+            title: {
+                text: 'Bilhões de usuários ativos',
+                font: {
+                    color: getCSS('--secondary-color')
+                }
+            }
         }
-      }
     }
-  }
-  
-  const grafico = document.createElement('div')//cria uma div
-  grafico.className = 'grafico'//cria classe para div
-  document.getElementById('graficos-container').appendChild(grafico)//insere a div e a classe na tag onde tm o ID = "graficos-conteiener"
-  Plotly.newPlot(grafico, data)
+
+    const grafico = document.createElement('div')
+    grafico.className = 'grafico'
+    document.getElementById('graficos-container').appendChild(grafico)
+    Plotly.newPlot(grafico, data, laytout)
 }
-quantidadeUsuarios()
+
+quantidadeUsuariosPorRede()
